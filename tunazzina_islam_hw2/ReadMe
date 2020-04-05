@@ -1,0 +1,57 @@
+#To access PyTorch and Python 3.6+ in scholar cluster:
+
+module load learning/conda-5.1.0-py36-gpu
+
+#And then (I use 1.0.0)
+
+module load ml-toolkit-gpu/pytorch/1.0.0
+
+
+# Example Command
+
+    python hw2_training.py data -i torch.nn
+
+
+# I updated mnist.py according to Professor Ribeiro's Piazza post. If you are using an older version of torchvision, please replace mnist.py with the following code given by professor.
+
+
+# Command to implement Feedforward Neural Network with Autograd (Question 2)
+
+	python hw2_training.py data -i torch.autograd
+
+
+# Learning Curves: Deep vs Shallow network (Question 3)
+# I have a different python file for the network named networks_lc.py. I import this one in hw2_learning_curves.py. I added argument -c in command line to choose network whether it is deep or shallow.
+
+# command for deep network
+
+	python hw2_learning_curves.py data -i torch.autograd -c 1
+
+
+# command for shallow network
+
+	python hw2_learning_curves.py data -i torch.autograd -c 0
+
+
+# Command to implement Backpropagation from Scratch (Question 4)
+
+	python hw2_training.py data
+
+
+# Command for learning curves (Question 4)
+
+# command for deep network
+
+	python hw2_learning_curves.py data -c 1
+
+
+# command for shallow network
+
+	python hw2_learning_curves.py data -c 0
+
+
+#I have attached the Question 1, plots, Analysis on report.
+
+
+
+
